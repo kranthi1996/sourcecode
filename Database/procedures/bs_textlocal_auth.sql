@@ -1,21 +1,20 @@
-use bsdev;
-DROP PROCEDURE IF EXISTS  bs_mvayyo_auth;
+
+DROP PROCEDURE IF EXISTS  bs_textlocal_auth;
 
 -- --------------------------------------------------------------------------------
 -- Created Date : 19th nov 2018
 -- --------------------------------------------------------------------------------
 DELIMITER $$
 
-CREATE PROCEDURE `bs_mvayyo_auth`
+CREATE PROCEDURE `bs_textlocal_auth`
 				(
-					IN      username		VARCHAR(30),
-                    IN      password        VARCHAR(15)
+					IN      i_apikey		VARCHAR(30)
+                   
 				)
 begin
 	 
-	SELECT		m.username
-	,			m.password
-    FROM		bs_mvayyo_auth m;
+	SELECT		m.apikey
+    FROM		bs_textlocal_auth m;
 end $$
 
 DELIMITER ;
